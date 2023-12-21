@@ -10,8 +10,8 @@ I'm on a journey to become a Software Engineer. When I'm not coding, you'll find
 
 ## 🔗 Connect with Me
 
-[![GitHub](https://icons8.com/icon/E2KVOMc77Geo/github)](https://github.com/ShirshenduR)
-[![Twitter](https://icons8.com/icon/phOKFKYpe00C/twitterx)](https://twitter.com/Shirshendu_R)
+[![GitHub](https://img.icons8.com/icon/E2KVOMc77Geo/github)](https://github.com/ShirshenduR)
+[![Twitter](https://img.icons8.com/icon/phOKFKYpe00C/twitterx)](https://twitter.com/Shirshendu_R)
 
 ## 📫 Get in Touch
 
