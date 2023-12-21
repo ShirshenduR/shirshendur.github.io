@@ -1,7 +1,5 @@
 # shirshendur.github.io
-<!-- Add the provided Giphy iframe -->
-<iframe src="https://giphy.com/embed/qgQUggAC3Pfv687qPC" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dommespace-domme-space-programador-qgQUggAC3Pfv687qPC">via GIPHY</a></p>
-
+![Hello!](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXdsd251cnk3Z3I3djJieDFsOGljNGc0c3NtMmxtMHV4Nm5ub25idSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qgQUggAC3Pfv687qPC/giphy.gif)
 # 👋 Hi there, I'm Shirshendu R Tripathi!
 
 Welcome to my GitHub profile. I'm passionate about Coding, and I enjoy coding. 
@@ -17,7 +15,7 @@ I'm on a journey to become a Software Engineer. When I'm not coding, you'll find
 
 ## 📫 Get in Touch
 
-📧 Email me at [your-email@example.com](mailto:shirsh8924@gmail.com) or send me a DM on [Twitter](https://twitter.com/Shirshendu_R).
+📧 Email me at [shirsh8924@gmail.com](mailto:shirsh8924@gmail.com) or send me a DM on [Twitter](https://twitter.com/Shirshendu_R).
 
 ## 🌱 Current Learning
 
