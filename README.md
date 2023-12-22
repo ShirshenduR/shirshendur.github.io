@@ -24,7 +24,7 @@ I'm currently diving deep into preparing for JEE 2024. Exciting discoveries ahea
 
 ## 🚀 GitHub Stats
 
-![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=ShirshenduR&show_icons=true&rank_icon)
+![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=ShirshenduR&show_icons=true&hiderank_icon)
 
 ## 🤝 Let's Connect
 
