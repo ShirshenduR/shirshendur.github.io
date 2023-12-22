@@ -31,3 +31,4 @@ I'm currently diving deep into preparing for JEE 2024. Exciting discoveries ahea
 I'm always open to interesting conversations and collaboration. Connect with me, and let's create something amazing together!
 
 Thanks for dropping by! 😊✨
+Bye, Bye 👋 
