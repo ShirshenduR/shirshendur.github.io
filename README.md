@@ -7,7 +7,7 @@ Welcome to my GitHub profile. I'm passionate about Coding, and I enjoy coding.
 
 ## 🌟 About Me
 
-I'm on a journey to become a Software Engineer. When I'm not coding, you'll find me listening to music.
+I'm on a journey to become a Software Engineer. When I'm not coding, you'll find me listening to music on Spotify.
 
 ## 🔗 Connect with Me
 
