@@ -22,9 +22,6 @@ I'm on a journey to become a Software Engineer. When I'm not coding, you'll find
 
 I'm currently diving deep into preparing for JEE 2024. Exciting discoveries ahead!
 
-## 🚀 GitHub Stats
-
-![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=ShirshenduR&show_icons=true&rank_icon=github&hide=stars&count_private=true&include_all_commits=true)
 
 ## 🤝 Let's Connect
 
