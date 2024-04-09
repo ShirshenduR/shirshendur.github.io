@@ -3,7 +3,7 @@
 ![Hello!](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXdsd251cnk3Z3I3djJieDFsOGljNGc0c3NtMmxtMHV4Nm5ub25idSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qgQUggAC3Pfv687qPC/giphy.gif)
 
 # 👋 Hi there, I'm Shirshendu R Tripathi!
-Welcome to my GitHub profile. I'm passionate about Coding, and I enjoy coding. 
+Welcome to my Portfolio. I'm passionate about Coding, and I enjoy coding. 
 
 ## 🌟 About Me
 
