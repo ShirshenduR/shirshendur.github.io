@@ -22,7 +22,8 @@ I'm on a journey to become a Software Engineer. When I'm not coding, you'll find
 
 I'm currently learning coding. Exciting discoveries ahead!
 
-
+## Profile Stats
+![Shirshendu's GitHub stats](https://github-readme-stats.vercel.app/api?username=ShirshenduR&show_icons=true&theme=transparent)
 ## 🤝 Let's Connect
 
 I'm always open to interesting conversations and collaboration. Connect with me, and let's create something amazing together!
