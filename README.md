@@ -20,7 +20,7 @@ I'm on a journey to become a Software Engineer. When I'm not coding, you'll find
 
 ## 🌱 Current Learning
 
-I'm currently diving deep into preparing for JEE 2024. Exciting discoveries ahead!
+I'm currently learning coding. Exciting discoveries ahead!
 
 
 ## 🤝 Let's Connect
