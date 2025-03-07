@@ -31,9 +31,9 @@ I'm currently learning coding. Exciting discoveries ahead!
 
 ## Profile Stats
 ![](https://github-readme-streak-stats.herokuapp.com/?user=ShirshenduR&theme=transparent&hide_border=false)
-<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Asymtode712&theme=radical">
-<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Asymtode712&theme=radical">
-<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Asymtode712&theme=radical">
+<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ShirshenduR&theme=radical">
+<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ShirshenduR&theme=radical">
+<img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ShirshenduR&theme=radical">
 <br/>
 
 ## 🏆 GitHub Trophies
