@@ -27,7 +27,7 @@ Currently I am pursuing my B.Tech from Indian Institute Of Information Technolog
 I'm currently learning coding. Exciting discoveries ahead!
 
 ## Profile Stats
-![](https://github-readme-streak-stats.herokuapp.com/?user=ShirshenduR&theme=radicalt&hide_border=false)
+![Shirshendu's GitHub stats](![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ShirshenduR&count_private=true&show_icons=true)
 <img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ShirshenduR&theme=radical">
 <img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ShirshenduR&theme=radical">
 <img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ShirshenduR&theme=radical">
