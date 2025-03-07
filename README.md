@@ -24,7 +24,6 @@ Currently I am pursuing my B.Tech from Indian Institute Of Information Technolog
 I'm currently learning coding. Exciting discoveries ahead!
 
 ## Profile Stats
-![Shirshendu's GitHub stats](https://github-readme-stats.vercel.app/api?username=ShirshenduR&show_icons=true&theme=transparent)
 ![](https://github-readme-streak-stats.herokuapp.com/?user=ShirshenduR&theme=transparent&hide_border=false)<br/>
 
 ## 🏆 GitHub Trophies
