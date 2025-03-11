@@ -1,8 +1,9 @@
 
-
+<head>
+  <link rel="favicon" href="https://img.icons8.com/?size=100&id=lgyS725ZKMwY&format=png&color=FFFFFF">
+</head>
 ![Hello!](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXdsd251cnk3Z3I3djJieDFsOGljNGc0c3NtMmxtMHV4Nm5ub25idSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qgQUggAC3Pfv687qPC/giphy.gif)
 
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=6499E9&height=90&section=header"/>
 <div id="header" align="center">
 <h1>Hey there, Shirshendu this side!<img src="./assets/giphy.gif" width="35px" alt="GIF"></h1>
 </div>
