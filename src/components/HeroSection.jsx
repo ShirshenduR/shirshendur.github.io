@@ -1,6 +1,29 @@
+import { useEffect, useState } from "react";
 import { ArrowDown } from "lucide-react";
 
+const greetings = [  "Hi, I'm",         // English  // French (shorter than Bonjour)
+  "नमस्ते, मैं हूँ",    
+  "Hola, soy",       
+  "Oi, sou",         
+  "Nǐ hǎo",      
+];
+
 export const HeroSection = () => {
+  const [currentGreetingIndex, setCurrentGreetingIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false); // fade out
+      setTimeout(() => {
+        setCurrentGreetingIndex((prev) => (prev + 1) % greetings.length);
+        setFade(true); // fade in next greeting
+      }, 500);
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="hero"
@@ -8,25 +31,26 @@ export const HeroSection = () => {
     >
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
-            <span className="text-primary opacity-0 animate-fade-in-delay-1">
-              {" "}
-              Shirshendu 
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight flex justify-center items-center gap-2">
+            <span
+              className={`transition-opacity duration-500 ${
+                fade ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              {greetings[currentGreetingIndex]}
             </span>
-            <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
-              {" "}
-              R Tripathi
-            </span>
+            <span className="text-primary"> Shirshendu </span>
+            <span className="text-gradient ml-2"> R Tripathi</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-             I’m a developer who loves building smooth, scalable, and meaningful digital experiences. 
-             I focus on writing clean code, solving real problems, and always learning something new along the way. 
-             I focus on building tech that’s both practical and impactful.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-100">
+            I’m a developer who loves building smooth, scalable, and meaningful
+            digital experiences. I focus on writing clean code, solving real
+            problems, and always learning something new along the way. I focus
+            on building tech that’s both practical and impactful.
           </p>
 
-          <div className="pt-4 opacity-0 animate-fade-in-delay-4">
+          <div className="pt-4">
             <a href="#projects" className="cosmic-button">
               View My Work
             </a>
