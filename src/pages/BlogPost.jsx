@@ -56,7 +56,7 @@ export default function BlogPost() {
     return (
         <div className="page" style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
             <Navbar />
-            <main className="wrap-sm pt-nav" style={{ paddingBottom: 80, flex: 1 }}>
+            <main style={{ flex: 1, maxWidth: 780, margin: "0 auto", width: "100%", padding: "88px 16px 80px", boxSizing: "border-box" }}>
                 {st.loading ? (
                     <p style={{ color: "var(--text-faint)", fontSize: 13 }}>
                         <span className="p-dollar">$</span> Reading {slug}.md…<span className="cursor" />
@@ -80,7 +80,7 @@ export default function BlogPost() {
                             <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 14 }}>
                                 {Array.isArray(st.meta.tags) && st.meta.tags.map(t => <span key={t} className="tag">{t}</span>)}
                             </div>
-                            <h1 style={{ fontSize: 26, fontWeight: 800, color: "var(--text)", lineHeight: 1.3, marginBottom: 12 }}>
+                            <h1 style={{ fontSize: "clamp(18px, 5vw, 26px)", fontWeight: 800, color: "var(--text)", lineHeight: 1.35, marginBottom: 12, wordBreak: "break-word" }}>
                                 {st.meta.title || slug}
                             </h1>
                             <p style={{ fontSize: 12, color: "var(--text-faint)" }}>
