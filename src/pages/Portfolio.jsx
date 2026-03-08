@@ -66,10 +66,10 @@ export default function Portfolio() {
             <main style={{ flex: 1 }}>
 
                 {/* ── Hero ──────────────────────────────────── */}
-                <section style={{ padding: "110px 24px 80px", textAlign: "center", borderBottom: "1px solid var(--border)" }}>
+                <section className="portfolio-hero" style={{ padding: "110px 24px 80px", textAlign: "center", borderBottom: "1px solid var(--border)" }}>
                     <div style={{ maxWidth: 700, margin: "0 auto" }}>
                         {/* Avatar placeholder */}
-                        <div style={{ width: 80, height: 80, borderRadius: "50%", background: "var(--green-glow)", border: "2px solid rgba(61,255,122,0.3)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 32, margin: "0 auto 24px" }}>S</div>
+                        <div className="portfolio-hero-avatar" style={{ width: 80, height: 80, borderRadius: "50%", background: "var(--green-glow)", border: "2px solid rgba(61,255,122,0.3)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 32, margin: "0 auto 24px" }}>S</div>
                         <h1 style={{ fontSize: 36, fontWeight: 800, color: "var(--green)", textShadow: "0 0 16px rgba(61,255,122,0.25)", marginBottom: 8, letterSpacing: "-0.02em" }}>
                             Shirshendu Ranjana Tripathi
                         </h1>
@@ -81,7 +81,7 @@ export default function Portfolio() {
                         </p>
 
                         {/* Action buttons */}
-                        <div style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap" }}>
+                        <div className="portfolio-actions" style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap" }}>
                             <a href="https://github.com/ShirshenduR" target="_blank" rel="noreferrer" className="btn btn-green">
                                 ⌥ GitHub
                             </a>
@@ -120,7 +120,7 @@ export default function Portfolio() {
                 <section style={{ padding: "64px 24px", borderBottom: "1px solid var(--border)" }}>
                     <div style={{ maxWidth: 960, margin: "0 auto" }}>
                         <div className="sh"><span className="sh-cmd">ls</span><span className="sh-flag">-la</span><span className="sh-arg">~/projects/</span><span className="sh-line" /></div>
-                        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 14 }}>
+                        <div className="projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 14 }}>
                             {PROJECTS.map(p => (
                                 <a key={p.name} href={p.url} target="_blank" rel="noreferrer" className="card-link">
                                     <div className="card" style={{ height: "100%", display: "flex", flexDirection: "column", gap: 10 }}>
@@ -147,7 +147,7 @@ export default function Portfolio() {
                 <section style={{ padding: "64px 24px", borderBottom: "1px solid var(--border)" }}>
                     <div style={{ maxWidth: 780, margin: "0 auto" }}>
                         <div className="sh"><span className="sh-cmd">cat</span><span className="sh-arg">skills.txt</span><span className="sh-line" /></div>
-                        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 14 }}>
+                        <div className="skills-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 14 }}>
                             {SKILLS.map(s => (
                                 <div key={s.cat} style={{ background: "var(--bg-2)", border: "1px solid var(--border)", borderRadius: 6, padding: "14px 16px" }}>
                                     <div style={{ fontSize: 11, color: "var(--green)", letterSpacing: "0.06em", marginBottom: 10 }}>▸ {s.cat.toUpperCase()}</div>
@@ -164,7 +164,7 @@ export default function Portfolio() {
                 <section style={{ padding: "64px 24px", borderBottom: "1px solid var(--border)" }}>
                     <div style={{ maxWidth: 780, margin: "0 auto" }}>
                         <div className="sh"><span className="sh-cmd">cat</span><span className="sh-arg">achievements.txt</span><span className="sh-line" /></div>
-                        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 10 }}>
+                        <div className="achievements-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 10 }}>
                             {ACHIEVEMENTS.map(a => (
                                 <div key={a.title} style={{ background: "var(--bg-2)", border: "1px solid var(--border)", borderRadius: 6, padding: "14px 16px", display: "flex", gap: 12, alignItems: "flex-start" }}>
                                     <span style={{ fontSize: 22, lineHeight: 1 }}>{a.icon}</span>

@@ -687,29 +687,9 @@ body::after {
 }
 
 /* ──────────────────────────────────────
-   RESPONSIVE
-────────────────────────────────────── */
-@media (max-width: 640px) {
-  .hide-sm {
-    display: none !important;
-  }
-
-  .show-sm {
-    display: flex !important;
-  }
-
-  .wrap,
-  .wrap-sm {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-
-/* ──────────────────────────────────────
    PORTFOLIO PAGE EXTRAS
 ────────────────────────────────────── */
 
-/* Green filled button */
 .btn-green {
   background: rgba(61, 255, 122, 0.1) !important;
   color: var(--green) !important;
@@ -720,7 +700,6 @@ body::after {
   background: rgba(61, 255, 122, 0.18) !important;
 }
 
-/* Shell prompt decorative line for sections */
 .sh {
   display: flex;
   align-items: center;
@@ -729,22 +708,87 @@ body::after {
   margin-bottom: 28px;
   color: var(--text-faint);
   letter-spacing: 0.03em;
+  flex-wrap: wrap;
+}
+.sh-cmd  { color: var(--green); }
+.sh-flag { color: var(--amber); }
+.sh-arg  { color: var(--blue); }
+.sh-line { flex: 1; height: 1px; background: var(--border); min-width: 20px; }
+
+/* ──────────────────────────────────────
+   RESPONSIVE — TABLET (≤ 768px)
+────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hide-sm { display: none !important; }
+  .show-sm { display: flex !important; }
+
+  .wrap, .wrap-sm {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Smaller section padding */
+  section { padding-top: 40px !important; padding-bottom: 40px !important; }
+
+  /* Cards — full width */
+  .card { padding: 14px 16px; }
+
+  /* Tag + button tap targets */
+  .btn { padding: 8px 16px; font-size: 12px; }
+  .tag { padding: 3px 8px; font-size: 10px; }
 }
 
-.sh-cmd {
-  color: var(--green);
-}
+/* ──────────────────────────────────────
+   RESPONSIVE — MOBILE (≤ 480px)
+────────────────────────────────────── */
+@media (max-width: 480px) {
+  body { font-size: 13px; }
 
-.sh-flag {
-  color: var(--amber);
-}
+  /* ── Navbar ── */
+  nav { height: 44px !important; }
+  nav .nav-brand-text { display: none; }   /* hide @portfolio:~% on tiny screens */
 
-.sh-arg {
-  color: var(--blue);
-}
+  /* ── Terminal window ── */
+  .terminal-wrap {
+    padding: 8px !important;
+  }
+  .terminal-box {
+    height: 92vh !important;
+    border-radius: 6px !important;
+  }
+  .terminal-output {
+    padding: 10px 12px !important;
+    font-size: 11px !important;
+    line-height: 1.6 !important;
+  }
+  .terminal-input-bar {
+    padding: 8px 12px !important;
+    font-size: 11px !important;
+  }
+  .terminal-titlebar {
+    padding: 8px 10px !important;
+  }
+  .terminal-title-text {
+    display: none !important;   /* hide long title on tiny screens */
+  }
 
-.sh-line {
-  flex: 1;
-  height: 1px;
-  background: var(--border);
+  /* ── Portfolio page ── */
+  .portfolio-hero { padding: 88px 16px 48px !important; }
+  .portfolio-hero h1 { font-size: 22px !important; }
+  .portfolio-hero-avatar { width: 60px !important; height: 60px !important; font-size: 24px !important; }
+  .portfolio-actions { gap: 8px !important; }
+  .portfolio-actions a { font-size: 11px !important; padding: 6px 12px !important; }
+
+  /* ── Blog page ── */
+  .blog-title { font-size: 22px !important; }
+
+  /* ── Grid layouts: always 1-col on mobile ── */
+  .projects-grid,
+  .skills-grid,
+  .achievements-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Footer ── */
+  footer { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; padding: 16px !important; }
 }

@@ -278,15 +278,15 @@ export function Terminal({ blogPosts = [] }) {
     const p = formatPrompt(cwd)
 
     return (
-        <div style={{ width: "100%", height: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "24px", boxSizing: "border-box", opacity: visible ? 1 : 0, transition: "opacity .4s ease" }}
+        <div className="terminal-wrap" style={{ width: "100%", height: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "24px", boxSizing: "border-box", opacity: visible ? 1 : 0, transition: "opacity .4s ease" }}
             onClick={focusInput}>
-            <div style={{ width: "100%", maxWidth: 900, height: "85vh", minHeight: 480, display: "flex", flexDirection: "column", background: "var(--bg-2)", border: "1px solid var(--border)", borderRadius: "var(--radius)", boxShadow: "0 32px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.03) inset", overflow: "hidden" }}>
+            <div className="terminal-box" style={{ width: "100%", maxWidth: 900, height: "85vh", minHeight: 480, display: "flex", flexDirection: "column", background: "var(--bg-2)", border: "1px solid var(--border)", borderRadius: "var(--radius)", boxShadow: "0 32px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.03) inset", overflow: "hidden" }}>
                 {/* Title bar */}
-                <div style={{ background: "var(--bg-3)", borderBottom: "1px solid var(--border)", padding: "11px 16px", display: "flex", alignItems: "center", gap: 8, flexShrink: 0, userSelect: "none", position: "relative" }}>
+                <div className="terminal-titlebar" style={{ background: "var(--bg-3)", borderBottom: "1px solid var(--border)", padding: "11px 16px", display: "flex", alignItems: "center", gap: 8, flexShrink: 0, userSelect: "none", position: "relative" }}>
                     <span className="tw-dot dot-r" />
                     <span className="tw-dot dot-y" />
                     <span className="tw-dot dot-g" />
-                    <span style={{ position: "absolute", left: "50%", transform: "translateX(-50%)", fontSize: 11, color: "var(--muted)", letterSpacing: "0.06em", pointerEvents: "none" }}>
+                    <span className="terminal-title-text" style={{ position: "absolute", left: "50%", transform: "translateX(-50%)", fontSize: 11, color: "var(--muted)", letterSpacing: "0.06em", pointerEvents: "none" }}>
                         {p.user}@{p.host} — zsh — {cwd}
                     </span>
                     <div style={{ marginLeft: "auto", display: "flex", gap: 12 }}>
@@ -296,7 +296,7 @@ export function Terminal({ blogPosts = [] }) {
                 </div>
 
                 {/* Output area */}
-                <div style={{ flex: 1, overflowY: "auto", padding: "16px 20px", fontFamily: "'JetBrains Mono', monospace", fontSize: 13, lineHeight: 1.7 }}>
+                <div className="terminal-output" style={{ flex: 1, overflowY: "auto", padding: "16px 20px", fontFamily: "'JetBrains Mono', monospace", fontSize: 13, lineHeight: 1.7 }}>
                     {lines.map((line, i) => {
                         if (line.type === "cmd") {
                             return (
@@ -320,7 +320,7 @@ export function Terminal({ blogPosts = [] }) {
                 </div>
 
                 {/* Input prompt line */}
-                <div style={{ borderTop: "1px solid var(--border)", padding: "10px 20px", display: "flex", alignItems: "center", gap: 6, flexShrink: 0, background: "var(--bg-2)" }}>
+                <div className="terminal-input-bar" style={{ borderTop: "1px solid var(--border)", padding: "10px 20px", display: "flex", alignItems: "center", gap: 6, flexShrink: 0, background: "var(--bg-2)" }}>
                     <span style={{ color: "var(--green)", fontSize: 13, whiteSpace: "nowrap" }}>{p.user}</span>
                     <span style={{ color: "var(--muted)", fontSize: 13 }}>@</span>
                     <span style={{ color: "var(--green-dim)", fontSize: 13, whiteSpace: "nowrap" }}>{p.host}</span>
