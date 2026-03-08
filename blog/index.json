@@ -1,0 +1,14 @@
+[
+    {
+        "slug": "how-i-built-this-portfolio",
+        "title": "How I Built My Terminal-Style Portfolio",
+        "date": "2026-03-08",
+        "tags": [
+            "React",
+            "Portfolio",
+            "Web Dev"
+        ],
+        "readTime": "6 min read",
+        "excerpt": "I wanted a portfolio that visitors could explore like a real filesystem — by typing commands into a terminal. Here's how I built it with React, a virtual FS, and a localStorage-powered blog admin."
+    }
+]
