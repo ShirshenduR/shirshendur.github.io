@@ -27,8 +27,8 @@ const PROJECTS = [
         desc: "Built autonomous robot using MobileNet human detection model (Caffe). Integrated real-time vision inference with ESP8266 embedded robotic control.",
         tech: ["Python", "MobileNet", "ESP8266", "ROS2"],
         url: "https://github.com/ShirshenduR/Human-Following-Bot",
-        badge: "7th Rank — NIDAR",
-        badgeColor: "#3dff7a",
+        badge: null,
+        badgeColor: null,
     },
     {
         name: "Streamify",
