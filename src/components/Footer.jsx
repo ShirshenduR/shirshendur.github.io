@@ -1,18 +1,29 @@
-import { ArrowUp } from "lucide-react";
+import { Link } from "react-router-dom"
 
-export const Footer = () => {
-  return (
-    <footer className="py-8 px-4 bg-card relative border-t border-border mt-12 flex flex-col items-center gap-4 text-center">
-      <p className="text-sm text-muted-foreground">
-        Made with <span className="text-red-500">💙</span> by <strong>Shirshendu R Tripathi</strong>
-      </p>
-      <a
-        href="#hero"
-        className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
-        aria-label="Scroll to top"
-      >
-        <ArrowUp size={20} />
-      </a>
-    </footer>
-  );
-};
+export function Footer() {
+    return (
+        <footer style={{
+            borderTop: "1px solid var(--border)",
+            padding: "18px 28px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            flexWrap: "wrap",
+            gap: 10,
+            marginTop: "auto",
+        }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: "var(--text-faint)" }}>
+                <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--green)", boxShadow: "0 0 6px var(--green)", display: "inline-block" }} />
+                <Link to="/" style={{ color: "var(--green)", textDecoration: "none", fontWeight: 600 }}>shirshendur</Link>
+                <span style={{ color: "var(--muted)" }}>@portfolio:~$</span>
+                <span style={{ animation: "blink 1s step-end infinite", color: "var(--green)" }}>▋</span>
+            </div>
+            <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
+                <Link to="/" style={{ fontSize: 11, color: "var(--text-faint)", textDecoration: "none" }}>terminal</Link>
+                <Link to="/blog" style={{ fontSize: 11, color: "var(--text-faint)", textDecoration: "none" }}>blog</Link>
+                <Link to="/admin" style={{ fontSize: 11, color: "var(--text-faint)", textDecoration: "none" }}>admin</Link>
+                <span style={{ fontSize: 11, color: "var(--text-faint)" }}>© {new Date().getFullYear()}</span>
+            </div>
+        </footer>
+    )
+}
