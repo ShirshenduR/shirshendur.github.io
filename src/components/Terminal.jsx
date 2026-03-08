@@ -19,7 +19,7 @@ function formatPrompt(cwd) {
 function lsDir(path, blogPosts) {
     if (path === "~/blog") {
         const posts = blogPosts.map(p => p.slug + ".md")
-        return posts.length === 0 ? "# No blog posts yet. Run 'admin' to write one." : posts.join("  ")
+        return posts.length === 0 ? "# No blog posts yet." : posts.join("  ")
     }
     const node = FS[path] || FS["~"]
     if (!node) return `ls: cannot access '${path}': No such file or directory`
@@ -186,10 +186,6 @@ export function Terminal({ blogPosts = [] }) {
                 setTimeout(() => navigate("/blog"), 600)
                 break
 
-            case "admin":
-                pushLine({ type: "output", text: "Opening ~/admin…", color: "var(--amber)" })
-                setTimeout(() => navigate("/admin"), 600)
-                break
 
             case "open": {
                 if (!arg) { pushLine({ type: "output", text: "open: missing argument\nUsage: open <url|project-name>", color: "var(--red)" }); break }
@@ -209,12 +205,7 @@ export function Terminal({ blogPosts = [] }) {
             }
 
             case "sudo":
-                if (arg === "admin") {
-                    pushLine({ type: "output", text: "Opening ~/admin…", color: "var(--amber)" })
-                    setTimeout(() => navigate("/admin"), 600)
-                } else {
-                    pushLine({ type: "output", text: `[sudo] password for ${PROMPT_USER}:\nSorry, try again.\nSorry, try again.\nsudo: ${arg || "cmd"}: 3 incorrect password attempts`, color: "var(--red)" })
-                }
+                pushLine({ type: "output", text: `[sudo] password for ${PROMPT_USER}:\nSorry, try again.\nsudo: 3 incorrect password attempts`, color: "var(--red)" })
                 break
 
             case "you_found_it":
@@ -225,7 +216,7 @@ export function Terminal({ blogPosts = [] }) {
                 pushLine({ type: "output", text: "Portfolio OS portfolio 3.0.0 React 19 / Vite 6 — IIITDM Jabalpur ECE" }); break
 
             case "touch": case "vim": case "nano": case "vi":
-                pushLine({ type: "output", text: "Use 'admin' to open the blog editor.", color: "var(--amber)" }); break
+                pushLine({ type: "output", text: "Permission denied: read-only filesystem.", color: "var(--red)" }); break
 
             case "grep":
                 pushLine({ type: "output", text: "Pipes aren't supported yet. Try 'cat' a specific file." }); break
@@ -243,7 +234,7 @@ export function Terminal({ blogPosts = [] }) {
                 pushLine({ type: "output", text: `${cmd}: Try 'contact' instead.` }); break
 
             case "git":
-                if (args[0] === "log") pushLine({ type: "output", text: "commit a1b2c3d (HEAD -> main)\nAuthor: Shirshendu Ranjana Tripathi\nDate:   " + new Date().toDateString() + "\n\n    feat: redesign portfolio as real macOS terminal emulator\n\ncommit b2c3d4e\n\n    feat: add AI Resume Maker\n\ncommit c3d4e5f\n\n    feat: admin markdown blog editor" })
+                if (args[0] === "log") pushLine({ type: "output", text: "commit a1b2c3d (HEAD -> main)\nAuthor: Shirshendu Ranjana Tripathi\nDate:   " + new Date().toDateString() + "\n\n    feat: redesign portfolio as real macOS terminal emulator\n\ncommit b2c3d4e\n\n    feat: add AI Resume Maker" })
                 else if (args[0] === "status") pushLine({ type: "output", text: "On branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean" })
                 else pushLine({ type: "output", text: "usage: git [log|status|...]\nTry: git log" })
                 break

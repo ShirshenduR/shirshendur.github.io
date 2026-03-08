@@ -20,8 +20,8 @@ export function Footer() {
             </div>
             <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
                 <Link to="/" style={{ fontSize: 11, color: "var(--text-faint)", textDecoration: "none" }}>terminal</Link>
+                <Link to="/portfolio" style={{ fontSize: 11, color: "var(--text-faint)", textDecoration: "none" }}>portfolio</Link>
                 <Link to="/blog" style={{ fontSize: 11, color: "var(--text-faint)", textDecoration: "none" }}>blog</Link>
-                <Link to="/admin" style={{ fontSize: 11, color: "var(--text-faint)", textDecoration: "none" }}>admin</Link>
                 <span style={{ fontSize: 11, color: "var(--text-faint)" }}>© {new Date().getFullYear()}</span>
             </div>
         </footer>

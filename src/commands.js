@@ -25,7 +25,7 @@ export const COMPLETIONS = {
   commands: [
     "help", "whoami", "ls", "cd", "cat", "echo", "date", "clear", "history",
     "skills", "achievements", "education", "contact", "portfolio", "projects",
-    "neofetch", "blog", "admin", "open", "sudo", "git", "uname", "man",
+    "neofetch", "blog", "open", "sudo", "git", "uname", "man",
     "exit", "pwd", "touch", "vim", "nano", "grep", "curl", "wget", "resume",
   ],
   paths: Object.keys(FS).map(k => k.replace("~/", "")),
@@ -240,7 +240,6 @@ Available commands:
   PAGES
     portfolio           Open visual portfolio page
     blog                Open blog page
-    admin               Open blog editor (password protected)
 
   SYSTEM
     skills              Quick skills overview

@@ -6,7 +6,6 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism"
 import { Navbar } from "../components/Navbar"
 import { Footer } from "../components/Footer"
-import { getLocalPost } from "../lib/usePosts"
 
 function parseFrontmatter(raw) {
     const m = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/)
@@ -15,7 +14,7 @@ function parseFrontmatter(raw) {
     m[1].split("\n").forEach(line => {
         const [k, ...v] = line.split(":")
         if (!k?.trim() || !v.length) return
-        const val = v.join(":").trim().replace(/^["']|["']$/g, "")
+        const val = v.join(":").trim().replace(/^[\"']|[\"']$/g, "")
         meta[k.trim()] = val.startsWith("[") && val.endsWith("]")
             ? val.slice(1, -1).split(",").map(x => x.trim())
             : val
@@ -28,13 +27,6 @@ export default function BlogPost() {
     const [st, setSt] = useState({ loading: true, meta: {}, body: "", error: false })
 
     useEffect(() => {
-        // Check localStorage first
-        const local = getLocalPost(slug)
-        if (local) {
-            setSt({ loading: false, meta: { title: local.title, date: local.date, tags: local.tags }, body: local.body, error: false })
-            return
-        }
-        // Fetch static .md
         fetch(`/blog/${slug}.md`)
             .then(r => { if (!r.ok) throw new Error(); return r.text() })
             .then(raw => {

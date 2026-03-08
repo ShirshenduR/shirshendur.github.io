@@ -53,8 +53,7 @@ export default function Blog() {
                     </div>
                 ) : shown.length === 0 ? (
                     <div style={{ color: "var(--text-faint)", fontSize: 13 }}>
-                        <span style={{ color: "var(--amber)" }}>!</span> No posts found.{" "}
-                        <Link to="/admin" style={{ color: "var(--green)", textDecoration: "none" }}>Write one →</Link>
+                        <span style={{ color: "var(--amber)" }}>!</span> No posts found.
                     </div>
                 ) : (
                     <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -63,7 +62,6 @@ export default function Blog() {
                                 <div className="card" style={{ animation: `fadeUp .4s ease-out ${i * 0.07}s both` }}>
                                     <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10, flexWrap: "wrap" }}>
                                         <span style={{ fontSize: 11, color: "var(--text-faint)" }}>{post.date}</span>
-                                        {post.local && <span className="tag tag-amber" style={{ fontSize: 10 }}>local</span>}
                                         {(post.tags || []).map(t => <span key={t} className="tag" style={{ fontSize: 10 }}>{t}</span>)}
                                     </div>
                                     <h2 style={{ fontSize: 16, fontWeight: 600, color: "var(--text)", marginBottom: 8, lineHeight: 1.4 }}>

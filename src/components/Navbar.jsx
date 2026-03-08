@@ -57,7 +57,6 @@ export function Navbar() {
           <Link to="/" style={linkStyle(location.pathname === "/")}>terminal</Link>
           <Link to="/portfolio" style={linkStyle(location.pathname === "/portfolio")}>portfolio</Link>
           <Link to="/blog" style={linkStyle(location.pathname === "/blog" || location.pathname.startsWith("/blog/"))}>blog</Link>
-          <Link to="/admin" style={{ ...linkStyle(location.pathname === "/admin"), border: "1px solid rgba(61,255,122,0.15)" }}>⊕ admin</Link>
         </div>
 
         <span style={{ fontSize: 11, color: "var(--text-faint)" }}>{time}</span>
