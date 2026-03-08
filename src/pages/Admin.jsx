@@ -13,7 +13,7 @@ const EMPTY = { title: "", slug: "", tags: "", excerpt: "", body: "# My Blog Pos
 // SHA-256 hash of the admin password (NOT the plaintext password).
 // Change by running: node -e "const c=require('crypto');console.log(c.createHash('sha256').update('YOUR_PASSWORD').digest('hex'))"
 // Current hash is for: shirshendur2028
-const PASS_HASH = "4047f90ac04a0b8e1acf72edc8e1bebbfcd628ccffbc07f94b2b2a28ae593d394"
+const PASS_HASH = "4047f90ac04a0b8e1acf72edc8e1bebbfcd628ccfbc07f944b2b2a28ae593d394"
 
 async function sha256(str) {
     const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str))
