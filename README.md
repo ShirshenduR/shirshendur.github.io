@@ -69,7 +69,6 @@ public/
 
 ## Blog System
 
-- Posts written at `/admin` (password protected) are saved to **localStorage**
 - Static `.md` files in `/public/blog/` serve as permanent posts
 - Both are merged by `usePosts.js` — localStorage posts appear first
 
