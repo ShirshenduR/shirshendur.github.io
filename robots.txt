@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shirshendur.github.io/sitemap.xml
+Host: shirshendur.github.io
