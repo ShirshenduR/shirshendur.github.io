@@ -38,10 +38,19 @@ Instead of a typical scrollable portfolio, visitors interact with a **real termi
 |-------|------|
 | Framework | React 19 + Vite 6 |
 | Styling | Vanilla CSS (custom properties, dark theme) |
-| Routing | React Router v6 (HashRouter for GitHub Pages) |
+| Routing | React Router + GitHub Pages SPA fallback |
 | Blog | ReactMarkdown + react-syntax-highlighter |
 | Blog Auth | SHA-256 hashed password (Web Crypto API) |
 | Hosting | GitHub Pages |
+
+## SEO Setup
+
+- Crawlable routes use normal paths like `/blog/how-i-built-this-portfolio` instead of `#/...`
+- `public/404.html` preserves deep links on GitHub Pages so refresh/direct visits still work
+- `robots.txt`, `sitemap.xml`, and `site.webmanifest` are generated from `public/blog/index.json`
+- Route-level title, description, canonical, Open Graph, Twitter, and JSON-LD metadata are set in the app
+
+Whenever you run `npm run build` or `npm run deploy`, the sitemap and robots file are regenerated automatically.
 
 ## Project Structure
 

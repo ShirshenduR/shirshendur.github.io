@@ -6,6 +6,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism"
 import { Navbar } from "../components/Navbar"
 import { Footer } from "../components/Footer"
+import { Seo } from "../components/Seo"
 
 function parseFrontmatter(raw) {
     const m = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/)
@@ -14,17 +15,33 @@ function parseFrontmatter(raw) {
     m[1].split("\n").forEach(line => {
         const [k, ...v] = line.split(":")
         if (!k?.trim() || !v.length) return
-        const val = v.join(":").trim().replace(/^[\"']|[\"']$/g, "")
+        const val = v.join(":").trim().replace(/^["']|["']$/g, "")
         meta[k.trim()] = val.startsWith("[") && val.endsWith("]")
-            ? val.slice(1, -1).split(",").map(x => x.trim())
+            ? val.slice(1, -1).split(",").map(x => x.trim().replace(/^["']|["']$/g, ""))
             : val
     })
     return { meta, body: m[2] }
 }
 
+function getPostDescription(meta, body) {
+    if (meta.description) return meta.description
+
+    const plainText = body
+        .replace(/```[\s\S]*?```/g, "")
+        .replace(/[#>*_`~-]/g, "")
+        .replace(/\[(.*?)\]\((.*?)\)/g, "$1")
+        .replace(/\s+/g, " ")
+        .trim()
+
+    return plainText.slice(0, 160)
+}
+
 export default function BlogPost() {
     const { slug } = useParams()
     const [st, setSt] = useState({ loading: true, meta: {}, body: "", error: false })
+
+    const description = getPostDescription(st.meta, st.body)
+    const postTitle = st.meta.title || slug
 
     useEffect(() => {
         fetch(`/blog/${slug}.md`)
@@ -36,7 +53,7 @@ export default function BlogPost() {
             .catch(() => setSt({ loading: false, meta: {}, body: "", error: true }))
     }, [slug])
 
-    const renderCode = ({ node, inline, className, children, ...props }) => {
+    const renderCode = ({ inline, className, children, ...props }) => {
         const match = /language-(\w+)/.exec(className || "")
         return !inline && match ? (
             <SyntaxHighlighter
@@ -55,6 +72,33 @@ export default function BlogPost() {
 
     return (
         <div className="page" style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+            <Seo
+                title={st.loading ? "Loading Post | Shirshendu Ranjana Tripathi" : `${postTitle} | Shirshendu Ranjana Tripathi`}
+                description={st.error ? "The requested blog post could not be found." : description}
+                canonicalPath={st.error ? null : `/blog/${slug}`}
+                noIndex={st.error}
+                type="article"
+                keywords={Array.isArray(st.meta.tags) ? st.meta.tags : []}
+                publishedTime={st.meta.date}
+                schema={st.error ? null : {
+                    "@context": "https://schema.org",
+                    "@type": "BlogPosting",
+                    headline: postTitle,
+                    description,
+                    datePublished: st.meta.date,
+                    author: {
+                        "@type": "Person",
+                        name: "Shirshendu Ranjana Tripathi",
+                        url: "https://shirshendur.github.io/",
+                    },
+                    publisher: {
+                        "@type": "Person",
+                        name: "Shirshendu Ranjana Tripathi",
+                    },
+                    url: `https://shirshendur.github.io/blog/${slug}`,
+                    keywords: Array.isArray(st.meta.tags) ? st.meta.tags.join(", ") : undefined,
+                }}
+            />
             <Navbar />
             <main style={{ flex: 1, maxWidth: 780, margin: "0 auto", width: "100%", padding: "88px 16px 80px", boxSizing: "border-box" }}>
                 {st.loading ? (

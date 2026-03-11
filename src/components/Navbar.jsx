@@ -45,9 +45,6 @@ export function Navbar() {
     letterSpacing: "0.03em",
   })
 
-  const isActive = (path) =>
-    path === "/" ? location.pathname === "/" : location.pathname.startsWith(path)
-
   return (
     <>
       <nav style={{

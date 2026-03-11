@@ -52,7 +52,7 @@ function resolvePath(target, cwd) {
 }
 
 // Context-aware tab completion
-function tabComplete(input, cwd) {
+function tabComplete(input) {
     const parts = input.trimStart().split(/\s+/)
     const cmd = parts[0]
     const rest = parts.slice(1).join(" ")
@@ -263,7 +263,7 @@ export function Terminal({ blogPosts = [] }) {
             setInput(newIdx === -1 ? "" : hist[newIdx])
         } else if (e.key === "Tab") {
             e.preventDefault()
-            const completed = tabComplete(input, cwd)
+            const completed = tabComplete(input)
             if (completed) setInput(completed)
         } else if (e.key === "l" && e.ctrlKey) {
             e.preventDefault()

@@ -6,6 +6,7 @@
   "homepage": "https://shirshendur.github.io",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/generate-seo.mjs",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",

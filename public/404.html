@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <script>
+      (function () {
+        var redirect = new URL(window.location.origin + "/")
+        redirect.searchParams.set("p", window.location.pathname)
+
+        if (window.location.search.length > 1) {
+          redirect.searchParams.set("q", window.location.search.slice(1))
+        }
+
+        if (window.location.hash.length > 1) {
+          redirect.searchParams.set("h", window.location.hash.slice(1))
+        }
+
+        window.location.replace(redirect.toString())
+      })()
+    </script>
+  </head>
+  <body></body>
+</html>

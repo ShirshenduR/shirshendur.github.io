@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Shirshendu portfolio social card">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0c0c0f" />
+      <stop offset="100%" stop-color="#12161c" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect x="72" y="72" width="1056" height="486" rx="28" fill="#090b0f" stroke="#1e2a24" stroke-width="2" />
+  <circle cx="122" cy="114" r="10" fill="#ff6b6b" />
+  <circle cx="154" cy="114" r="10" fill="#ffd166" />
+  <circle cx="186" cy="114" r="10" fill="#3dff7a" />
+  <text x="112" y="188" fill="#3dff7a" font-family="monospace" font-size="34">shirshendu@portfolio:~$ whoami</text>
+  <text x="112" y="274" fill="#e8f1ee" font-family="monospace" font-size="68" font-weight="700">Shirshendu Ranjana Tripathi</text>
+  <text x="112" y="340" fill="#9eb2aa" font-family="monospace" font-size="30">Full-Stack Developer • AI/ML • Robotics • Technical Blog</text>
+  <text x="112" y="432" fill="#3dff7a" filter="url(#glow)" font-family="monospace" font-size="28">Projects, portfolio, and engineering write-ups at shirshendur.github.io</text>
+</svg>

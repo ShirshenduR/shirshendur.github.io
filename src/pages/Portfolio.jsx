@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { Navbar } from "../components/Navbar"
 import { Footer } from "../components/Footer"
+import { Seo } from "../components/Seo"
 
 const PROJECTS = [
     {
@@ -62,6 +63,27 @@ const ACHIEVEMENTS = [
 export default function Portfolio() {
     return (
         <div className="page" style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+            <Seo
+                title="Portfolio | Shirshendu Ranjana Tripathi"
+                description="Projects, technical skills, achievements, and contact details for Shirshendu Ranjana Tripathi, a full-stack developer focused on AI/ML and robotics."
+                canonicalPath="/portfolio"
+                keywords={["Shirshendu projects", "AI projects", "robotics projects", "full-stack portfolio"]}
+                schema={{
+                    "@context": "https://schema.org",
+                    "@type": "ProfilePage",
+                    mainEntity: {
+                        "@type": "Person",
+                        name: "Shirshendu Ranjana Tripathi",
+                        url: "https://shirshendur.github.io/portfolio",
+                        sameAs: [
+                            "https://github.com/ShirshenduR",
+                            "https://linkedin.com/in/shirshendur",
+                        ],
+                        alumniOf: "IIITDM Jabalpur",
+                        knowsAbout: ["React", "Node.js", "Python", "AI", "Robotics"],
+                    },
+                }}
+            />
             <Navbar />
             <main style={{ flex: 1 }}>
 

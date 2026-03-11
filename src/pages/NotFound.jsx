@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom"
 import { Navbar } from "../components/Navbar"
+import { Seo } from "../components/Seo"
 
 export default function NotFound() {
   return (
     <div className="page" style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+      <Seo
+        title="Page Not Found | Shirshendu Ranjana Tripathi"
+        description="The requested page could not be found."
+        canonicalPath={null}
+        noIndex
+      />
       <Navbar />
       <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", padding: 24 }}>
         <div className="tw" style={{ maxWidth: 500, width: "100%" }}>

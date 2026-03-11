@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { Navbar } from "../components/Navbar"
 import { Footer } from "../components/Footer"
+import { Seo } from "../components/Seo"
 import { usePosts } from "../lib/usePosts"
 
 export default function Blog() {
@@ -13,6 +14,29 @@ export default function Blog() {
 
     return (
         <div className="page" style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+            <Seo
+                title="Blog | Shirshendu Ranjana Tripathi"
+                description="Technical notes, project write-ups, and engineering deep dives from Shirshendu Ranjana Tripathi."
+                canonicalPath="/blog"
+                keywords={["developer blog", "React blog", "portfolio blog", "AI engineering blog"]}
+                schema={{
+                    "@context": "https://schema.org",
+                    "@type": "Blog",
+                    name: "Shirshendu Blog",
+                    url: "https://shirshendur.github.io/blog",
+                    description: "Technical notes, project write-ups, and engineering deep dives from Shirshendu Ranjana Tripathi.",
+                    author: {
+                        "@type": "Person",
+                        name: "Shirshendu Ranjana Tripathi",
+                    },
+                    blogPost: posts.map(post => ({
+                        "@type": "BlogPosting",
+                        headline: post.title,
+                        url: `https://shirshendur.github.io/blog/${post.slug}`,
+                        datePublished: post.date,
+                    })),
+                }}
+            />
             <Navbar />
             <main style={{ flex: 1, maxWidth: 780, margin: "0 auto", width: "100%", padding: "88px 16px 64px", boxSizing: "border-box" }}>
 
