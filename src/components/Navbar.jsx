@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link, useLocation, useNavigate } from "react-router-dom"
+import ThemeToggle from "./ThemeToggle"
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -66,14 +67,15 @@ export function Navbar() {
           </button>
 
           {/* Desktop page links */}
-          <div className="hide-sm" style={{ display: "flex", alignItems: "center", gap: 4 }}>
-            <Link to="/" style={linkStyle(location.pathname === "/")}>terminal</Link>
+          <div className="hide-sm" style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <Link to="/" style={linkStyle(location.pathname === "/")}>home</Link>
             <Link to="/portfolio" style={linkStyle(location.pathname === "/portfolio")}>portfolio</Link>
             <Link to="/blog" style={linkStyle(location.pathname === "/blog" || location.pathname.startsWith("/blog/"))}>blog</Link>
           </div>
 
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <span className="hide-sm" style={{ fontSize: 11, color: "var(--text-faint)" }}>{time}</span>
+            <ThemeToggle />
 
             {/* Hamburger — mobile only */}
             <button
@@ -100,7 +102,7 @@ export function Navbar() {
           borderBottom: "1px solid var(--border)",
           animation: "fadeUp .15s ease-out",
         }}>
-          <Link to="/" style={mobileLinkStyle(location.pathname === "/")}>⌘ terminal</Link>
+          <Link to="/" style={mobileLinkStyle(location.pathname === "/")}>⌂ home</Link>
           <Link to="/portfolio" style={mobileLinkStyle(location.pathname === "/portfolio")}>◎ portfolio</Link>
           <Link to="/blog" style={mobileLinkStyle(location.pathname === "/blog" || location.pathname.startsWith("/blog/"))}>◈ blog</Link>
           <div style={{ padding: "12px 20px", fontSize: 11, color: "var(--text-faint)" }}>{time}</div>

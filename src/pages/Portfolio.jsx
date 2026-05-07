@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import { Navbar } from "../components/Navbar"
 import { Footer } from "../components/Footer"
 import { Seo } from "../components/Seo"
+import Hero3D from "../components/Hero3D"
 
 const PROJECTS = [
     {
@@ -90,8 +91,8 @@ export default function Portfolio() {
                 {/* ── Hero ──────────────────────────────────── */}
                 <section className="portfolio-hero" style={{ padding: "110px 24px 80px", textAlign: "center", borderBottom: "1px solid var(--border)" }}>
                     <div style={{ maxWidth: 700, margin: "0 auto" }}>
-                        {/* Avatar placeholder */}
-                        <div className="portfolio-hero-avatar" style={{ width: 80, height: 80, borderRadius: "50%", background: "var(--green-glow)", border: "2px solid rgba(61,255,122,0.3)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 32, margin: "0 auto 24px" }}>S</div>
+                        {/* 3D hero */}
+                        <Hero3D label={"S"} />
                         <h1 style={{ fontSize: 36, fontWeight: 800, color: "var(--green)", textShadow: "0 0 16px rgba(61,255,122,0.25)", marginBottom: 8, letterSpacing: "-0.02em" }}>
                             Shirshendu Ranjana Tripathi
                         </h1>
@@ -120,7 +121,7 @@ export default function Portfolio() {
 
                         <div style={{ marginTop: 24 }}>
                             <Link to="/" style={{ fontSize: 11, color: "var(--text-faint)", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 6, border: "1px solid var(--border)", padding: "5px 14px", borderRadius: 4 }}>
-                                <span style={{ color: "var(--green)" }}>❯</span> prefer the terminal? try the interactive version
+                                <span style={{ color: "var(--green)" }}>❯</span> try the interactive terminal version
                             </Link>
                         </div>
                     </div>

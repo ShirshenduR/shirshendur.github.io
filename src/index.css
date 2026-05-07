@@ -26,6 +26,65 @@
   --radius-sm: 5px;
 }
 
+/* Light theme overrides (toggle by setting `data-theme="light"` on <html>) */
+[data-theme="light"] {
+  --bg: #f6f7fb;
+  --bg-2: #ffffff;
+  --bg-3: #f2f4f8;
+  --border: #e6e9ef;
+  --border-2: #e0e4ea;
+  --green: #0b8457;
+  --green-dim: #0a7a4f;
+  --green-glow: rgba(11, 132, 87, 0.08);
+  --amber: #b26b00;
+  --blue: #1e6fff;
+  --muted: #6b7280;
+  --text: #0b1220;
+  --text-dim: #4b5563;
+  --text-faint: #8b94a6;
+  --red: #c53030;
+}
+
+/* 3D hero (simple CSS cube as a lightweight scaffold) */
+.hero-3d {
+  perspective: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 24px;
+}
+.cube-wrap {
+  width: 220px;
+  height: 220px;
+  transform-style: preserve-3d;
+  animation: cube-rotate 8s linear infinite;
+}
+.cube-face {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--green) 0%, rgba(61,255,122,0.08) 100%);
+  border: 1px solid rgba(255,255,255,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-2);
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 10px;
+  box-shadow: 0 8px 36px rgba(2,6,23,0.45);
+}
+.cube-face--front  { transform: translateZ(110px); }
+.cube-face--back   { transform: rotateY(180deg) translateZ(110px); }
+.cube-face--right  { transform: rotateY(90deg) translateZ(110px); }
+.cube-face--left   { transform: rotateY(-90deg) translateZ(110px); }
+.cube-face--top    { transform: rotateX(90deg) translateZ(110px); }
+.cube-face--bottom { transform: rotateX(-90deg) translateZ(110px); }
+
+@keyframes cube-rotate {
+  from { transform: rotateX(-14deg) rotateY(0deg); }
+  to   { transform: rotateX(-14deg) rotateY(360deg); }
+}
+
 /* ──────────────────────────────────────
    RESET & BASE
 ────────────────────────────────────── */
