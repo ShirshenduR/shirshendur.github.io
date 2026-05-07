@@ -9,14 +9,14 @@ export default function Home() {
     <div style={{ background: "var(--bg)", minHeight: "100vh" }}>
       <Seo
         title="Shirshendu Ranjana Tripathi | Terminal Portfolio"
-        description="Explore Shirshendu Ranjana Tripathi's terminal-style portfolio featuring full-stack, AI/ML, robotics projects, and a technical blog."
+        description="Explore Shirshendu Ranjana Tripathi's terminal-style portfolio featuring full-stack projects, LLM systems, hackathon-winning builds, and a technical blog."
         canonicalPath="/"
         keywords={[
           "Shirshendu Ranjana Tripathi",
           "Shirshendu portfolio",
           "full-stack developer portfolio",
-          "AI ML developer",
-          "robotics portfolio",
+          "LLM engineer portfolio",
+          "hackathon projects",
         ]}
         schema={[
           {
@@ -35,9 +35,9 @@ export default function Home() {
               "https://github.com/ShirshenduR",
               "https://linkedin.com/in/shirshendur",
             ],
-            jobTitle: "Full-Stack Developer",
+            jobTitle: "Full-Stack Developer and AI/ML Builder",
             alumniOf: "IIITDM Jabalpur",
-            knowsAbout: ["React", "Python", "AI", "Machine Learning", "Robotics"],
+            knowsAbout: ["React", "Python", "LLMs", "RAG", "NLP", "Machine Learning", "System Design"],
           },
         ]}
       />

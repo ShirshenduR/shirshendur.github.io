@@ -7,16 +7,16 @@ export const FS = {
   },
   "~/projects": {
     type: "dir",
-    children: ["CureCode/", "AI-Resume-Maker/", "Human-Following-Bot/", "Streamify/"],
+    children: ["saathi/", "TrueSignal/", "CureCode/", "Streamify/"],
   },
   "~/blog": { type: "dir", children: [] }, // populated dynamically
 }
 
 // GitHub URLs for each project (used by `open projects/<name>`)
 export const PROJECT_URLS = {
+  "saathi": "https://github.com/ShirshenduR/saathi",
+  "TrueSignal": "https://github.com/ShirshenduR/TrueSignal",
   "CureCode": "https://github.com/ShirshenduR/Hack-The-Future-CureCode",
-  "AI-Resume-Maker": "https://github.com/ShirshenduR/AI-RESUME-MAKER",
-  "Human-Following-Bot": "https://github.com/ShirshenduR/Human-Following-Bot",
   "Streamify": "https://github.com/ShirshenduR/Streamify",
 }
 
@@ -32,32 +32,32 @@ export const COMPLETIONS = {
   files: [
     "about.txt", "skills.txt", "contact.txt", "education.txt",
     "achievements.txt", "resume.pdf", ".secret",
-    "projects/CureCode", "projects/AI-Resume-Maker",
-    "projects/Human-Following-Bot", "projects/Streamify",
+    "projects/saathi", "projects/TrueSignal",
+    "projects/CureCode", "projects/Streamify",
     // bare project names for `open <name>` completion
-    "CureCode", "AI-Resume-Maker", "Human-Following-Bot", "Streamify",
+    "saathi", "TrueSignal", "CureCode", "Streamify",
   ],
 }
 
 export const FILES = {
   "about.txt": `
 NAME         Shirshendu Ranjana Tripathi
-ROLE         Full-Stack Developer · AI/ML Enthusiast · Robotics Builder
+ROLE         Full-Stack Developer · AI/ML Builder · Systems Engineer
 INSTITUTE    IIITDM Jabalpur — B.Tech ECE (2024–2028)
 PHONE        +91 89249 42797
 GITHUB       github.com/ShirshenduR
 LINKEDIN     linkedin.com/in/shirshendur
 
 BIO
-  I'm a first-year B.Tech ECE student at IIITDM Jabalpur who loves
-  building things — from full-stack web apps and AI pipelines to
-  autonomous robots. I've competed nationally, mentored in open source,
-  and ship projects across the entire stack.
+  B.Tech ECE student at IIITDM Jabalpur building full-stack products,
+  LLM workflows, and production-ready AI systems. I enjoy solving
+  real-world problems by combining software engineering, data pipelines,
+  and practical deployment.
 
 CURRENTLY
-  → B.Tech ECE @ IIITDM Jabalpur (Batch of 2028)
-  → Upcoming Coordinator — Aero Fabrication Club, IIITDM Jabalpur
-  → Building AI-powered tools and robotics systems
+  → Incoming Co-coordinator — Aero Fabrication Club (100+ members)
+  → Building AI products: Saathi, TrueSignal, and CureCode
+  → Shipping full-stack systems with measurable impact
   → Contributing to open source (50+ repositories on GitHub)
 
 TIP: run 'open github.com/ShirshenduR' to visit GitHub profile
@@ -67,6 +67,7 @@ TIP: run 'open github.com/ShirshenduR' to visit GitHub profile
 INSTITUTION   Indian Institute of Information Technology Design and
               Manufacturing (IIITDM), Jabalpur
 DEGREE        B.Tech in Electronics and Communication Engineering
+LOCATION      Jabalpur, India
 YEAR          2024 – 2028
 
 INSTITUTION   Metropolitan School, Gorakhpur, Uttar Pradesh
@@ -81,25 +82,23 @@ RELEVANT COURSEWORK
 PROGRAMMING LANGUAGES
   C++  Python  Java  JavaScript  TypeScript
 
-COMPUTER SCIENCE
-  Data Structures & Algorithms
-  Object Oriented Programming
+CS FUNDAMENTALS
+  Data Structures & Algorithms  Object Oriented Programming
+  System Design  REST APIs
 
 WEB DEVELOPMENT
-  React  Next.js  Node.js  Express.js  Django  Flask
+  React  Next.js  Node.js  Express.js  Django  Flask  RESTful APIs
 
 DATABASES
-  MongoDB  PostgreSQL  SQL
+  MongoDB  PostgreSQL  SQL  Vector Databases
 
 AI / ML
-  Computer Vision  MobileNet  OCR Pipelines
-  Retrieval Augmented Generation (RAG)
-
-EMBEDDED & ROBOTICS
-  ESP8266  ESP32  ROS2  Robotics  IoT
+  LLMs  Retrieval Augmented Generation (RAG)  NLP
+  Computer Vision  OCR Pipelines  Prompt Engineering
 
 TOOLS
   Git  GitHub  Docker  Figma  VS Code  Postman
+  Linux  Streamlit  OSINT APIs
 `.trim(),
 
   "contact.txt": `
@@ -117,22 +116,27 @@ QUICK LINKS
 `.trim(),
 
   "achievements.txt": `
-COMPETITIONS
-  🥇  7th Rank Nationwide
-      NIDAR Disaster Management Challenge
-      Among 350+ teams across India
-      → Trained a human detection model using a custom dataset
-        for disaster surveillance and rescue systems.
+HACKATHONS & COMPETITIONS
+  🏆  MLH HackByte 4.0 — ElevenLabs Sponsor Track Winner (2026)
+      Built Saathi with team SillyCoders in under 36 hours.
 
-  🏆  Hack The Future 2025 — Finalist
-      IIT Gandhinagar national-level hackathon
+  🥇  NIDAR Disaster Management Challenge — 7th Nationwide (2026)
+      Ranked among 350+ teams across India.
+
+  🎖️  Hack The Future 2025 — National Finalist
+      IIT Gandhinagar (Top 15 out of 300+ teams)
 
 OPEN SOURCE
-  🌟  Top 50 Mentor — GirlScript Summer of Code
-  🔗  50+ repositories on GitHub
+  🌟  Top 50 Mentor — GirlScript Summer of Code (2025)
+      Mentored 30+ contributors in a 3-month program.
+  🔗  50+ public repositories on GitHub
+
+LEADERSHIP
+  🛠️  Incoming Co-coordinator — Aero Fabrication Club, IIITDM
+      100+ member student club.
 
 COMPETITIVE PROGRAMMING
-  ★   3 Rating — CodeChef
+  ★   3-Star Rating — CodeChef
 
 CERTIFICATIONS
   ✓  CS50x — Introduction to Computer Science, Harvard University
@@ -152,6 +156,47 @@ Try: echo "you_found_it"
 
   // ── Projects ──────────────────────────────────────────────────────────────
 
+  "projects/saathi": `
+NAME    Saathi — Voice AI Care Platform
+YEAR    2026
+REPO    github.com/ShirshenduR/saathi
+
+DESCRIPTION
+  AI platform that places proactive Hindi voice calls to elderly users
+  using Twilio, ElevenLabs TTS, and Gemini LLM, with no smartphone
+  required for the user.
+
+HIGHLIGHTS
+  • Won ElevenLabs Sponsor Track at MLH HackByte 4.0 (400+ participants)
+  • Shipped family dashboard with mood tracking and safety risk flags
+  • Reduced caregiver response time by around 60%
+
+TECH
+  Next.js 14 · Node.js · MongoDB · ElevenLabs TTS · Twilio · Gemini LLM
+
+→ Run: open github.com/ShirshenduR/saathi
+`.trim(),
+
+  "projects/TrueSignal": `
+NAME    TrueSignal — Talent Verification Platform
+YEAR    2026
+REPO    github.com/ShirshenduR/TrueSignal
+
+DESCRIPTION
+  Verifies resume claims against live GitHub, LeetCode, and Codeforces
+  data via OSINT APIs and generates transparent audit reports.
+
+HIGHLIGHTS
+  • Reduced credential-fraud screening time by around 80%
+  • Multi-layer scoring: Sentence-BERT, entropy, and Jaccard metrics
+  • Achieved 92%+ precision over 200+ synthetic candidate profiles
+
+TECH
+  Python · Groq LLaMA-3 · Sentence-BERT · RAG · Streamlit · REST APIs
+
+→ Run: open github.com/ShirshenduR/TrueSignal
+`.trim(),
+
   "projects/CureCode": `
 NAME    CureCode — AI Document Intelligence System
 EVENT   IIT Gandhinagar Hack the Future (Finalist)
@@ -162,50 +207,29 @@ DESCRIPTION
   OCR pipelines and structured data extraction. Implemented Retrieval
   Augmented Generation (RAG) for semantic document querying and insights.
 
+HIGHLIGHTS
+  • Top 15 of 300+ teams at Hack The Future 2025
+  • Cut manual policy review time by an estimated 75%
+
 TECH
-  Python · OCR Pipelines · RAG · LLM APIs · Document Intelligence
+  Python · OCR · RAG · LLMs · Vector Search
 
 → Run: open github.com/ShirshenduR/Hack-The-Future-CureCode
 `.trim(),
 
-  "projects/AI-Resume-Maker": `
-NAME    AI Resume Maker — ATS Resume Generator
-REPO    github.com/ShirshenduR/AI-RESUME-MAKER
-
-DESCRIPTION
-  Full-stack AI platform that generates ATS-optimized resumes from
-  plain project descriptions. Includes authentication, template rendering,
-  and an automated resume generation pipeline.
-
-TECH
-  Full-Stack · AI / LLM APIs · Authentication · Template Engine
-
-→ Run: open github.com/ShirshenduR/AI-RESUME-MAKER
-`.trim(),
-
-  "projects/Human-Following-Bot": `
-NAME    Human Following Robot
-REPO    github.com/ShirshenduR/Human-Following-Bot
-
-DESCRIPTION
-  Autonomous robot capable of detecting and following a human target in
-  real time. Uses MobileNet human detection (Caffe) for vision inference
-  integrated with ESP8266-based embedded robotic control.
-
-TECH
-  Python · MobileNet · Caffe · ESP8266 · Computer Vision · Robotics
-
-→ Run: open github.com/ShirshenduR/Human-Following-Bot
-`.trim(),
-
   "projects/Streamify": `
 NAME    Streamify — Full-Stack Music Streaming Platform
+YEAR    2024
 REPO    github.com/ShirshenduR/Streamify
 
 DESCRIPTION
   Responsive music streaming web application with user authentication,
   dynamic UI, backend REST APIs, and integration with external music APIs
   for search and streaming.
+
+HIGHLIGHTS
+  • JWT auth, real-time search, and fully responsive interface
+  • Sustained 500+ concurrent sessions with sub-200ms API response time
 
 TECH
   React · Node.js · Express.js · MongoDB · REST APIs · Authentication
@@ -235,6 +259,7 @@ Available commands:
   PROJECTS
     ls projects/                   List all projects
     cat projects/<name>            Read project details
+    open saathi                    Open Saathi repository
     open github.com/ShirshenduR   Open GitHub profile
 
   PAGES
@@ -265,11 +290,11 @@ export const NEOFETCH = `
      ██████████████████████        Host:     shirshendur.github.io
      ██████████████████████        Kernel:   React 19 / Vite 6
      ██████████████████████        Shell:    zsh (custom emulator)
-      ████████████████████         Uptime:   1y (Batch of 2028)
-       ██████████████████          College:  IIITDM Jabalpur
-         ██████████████            Branch:   ECE · Aero Fab Club
+      ████████████████████         Uptime:   2y (Batch of 2028)
+       ██████████████████          College:  IIITDM Jabalpur, Jabalpur
+         ██████████████            Branch:   ECE · Aero Fab Club (Incoming Co-coordinator)
                                    Repos:    50+ on GitHub
-                                   Rating:   3★ CodeChef
-                                   Rank:     7th Nationwide (NIDAR)
+                                   Rating:   3-Star CodeChef
+                                   Rank:     7th Nationwide (NIDAR 2026)
                                    Colors:  ██ ██ ██ ██ ██ ██
 `.trim()

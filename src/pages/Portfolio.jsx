@@ -5,37 +5,37 @@ import { Seo } from "../components/Seo"
 
 const PROJECTS = [
     {
+        name: "saathi",
+        full: "Voice AI Care Platform",
+        desc: "Won ElevenLabs Sponsor Track at MLH HackByte 4.0. Built an AI platform for proactive Hindi voice calls to elderly users using Twilio, ElevenLabs TTS, and Gemini LLM.",
+        tech: ["Next.js 14", "Node.js", "MongoDB", "Twilio", "ElevenLabs", "Gemini LLM"],
+        url: "https://github.com/ShirshenduR/saathi",
+        badge: "HackByte 4.0 Winner",
+        badgeColor: "var(--amber)",
+    },
+    {
+        name: "TrueSignal",
+        full: "Talent Verification Platform",
+        desc: "Built OSINT-powered resume verification with multi-layer scoring and RAG-backed reporting. Achieved 92%+ precision on 200+ synthetic profiles.",
+        tech: ["Python", "LLaMA-3", "Sentence-BERT", "RAG", "Streamlit", "REST APIs"],
+        url: "https://github.com/ShirshenduR/TrueSignal",
+        badge: null,
+        badgeColor: null,
+    },
+    {
         name: "CureCode",
         full: "AI Document Intelligence System",
-        desc: "Built AI system to analyze policy documents using OCR pipelines and structured data extraction. Implemented RAG for semantic document querying.",
-        tech: ["Python", "RAG", "OCR", "LLM APIs"],
+        desc: "Built insurance document analysis with OCR + RAG for 100+ page policy PDFs. National finalist at Hack The Future 2025 (Top 15/300+) with major manual review-time reduction.",
+        tech: ["Python", "RAG", "OCR", "LLMs", "Vector Search"],
         url: "https://github.com/ShirshenduR/Hack-The-Future-CureCode",
         badge: "Hack The Future Finalist",
         badgeColor: "var(--amber)",
     },
     {
-        name: "AI Resume Maker",
-        full: "ATS Resume Generator",
-        desc: "Full-stack AI platform that generates ATS-optimized resumes from project descriptions. Implemented auth, template rendering, and automated pipeline.",
-        tech: ["React", "Node.js", "AI APIs", "Auth"],
-        url: "https://github.com/ShirshenduR/AI-RESUME-MAKER",
-        badge: null,
-        badgeColor: null,
-    },
-    {
-        name: "Human Following Robot",
-        full: "Autonomous Vision Robot",
-        desc: "Built autonomous robot using MobileNet human detection model (Caffe). Integrated real-time vision inference with ESP8266 embedded robotic control.",
-        tech: ["Python", "MobileNet", "ESP8266", "ROS2"],
-        url: "https://github.com/ShirshenduR/Human-Following-Bot",
-        badge: null,
-        badgeColor: null,
-    },
-    {
         name: "Streamify",
         full: "Full-Stack Music Streaming",
-        desc: "Responsive music streaming web app with authentication, dynamic UI, backend APIs, and external music API integration for search and streaming.",
-        tech: ["React", "Node.js", "Express", "MongoDB"],
+        desc: "Built a full-stack music platform with JWT auth, real-time search, responsive UI, and REST APIs integrated with external metadata/playback services.",
+        tech: ["React", "Node.js", "Express", "MongoDB", "REST APIs"],
         url: "https://github.com/ShirshenduR/Streamify",
         badge: null,
         badgeColor: null,
@@ -44,18 +44,19 @@ const PROJECTS = [
 
 const SKILLS = [
     { cat: "Languages", items: ["C++", "Python", "Java", "JavaScript", "TypeScript"] },
-    { cat: "Web", items: ["React", "Next.js", "Node.js", "Express.js", "Django", "Flask"] },
-    { cat: "Databases", items: ["MongoDB", "PostgreSQL", "SQL"] },
-    { cat: "AI / ML", items: ["Computer Vision", "MobileNet", "OCR", "RAG"] },
-    { cat: "Embedded", items: ["ESP8266", "ESP32", "ROS2", "IoT"] },
-    { cat: "Tools", items: ["Git", "Docker", "Figma", "Postman", "VS Code"] },
+    { cat: "CS Fundamentals", items: ["DSA", "OOP", "System Design", "REST APIs"] },
+    { cat: "Web", items: ["React", "Next.js 14", "Node.js", "Express.js", "Django", "Flask"] },
+    { cat: "Databases", items: ["MongoDB", "PostgreSQL", "SQL", "Vector DBs"] },
+    { cat: "AI / ML", items: ["LLMs", "RAG", "NLP", "Computer Vision", "OCR", "Prompt Engineering"] },
+    { cat: "Tools", items: ["Git", "Docker", "Figma", "Postman", "Linux", "Streamlit", "OSINT APIs"] },
 ]
 
 const ACHIEVEMENTS = [
+    { icon: "🏆", title: "MLH HackByte 4.0 Winner", sub: "ElevenLabs Sponsor Track (Saathi, team SillyCoders)" },
     { icon: "🥇", title: "7th Rank Nationwide", sub: "NIDAR Disaster Management Challenge — 350+ teams" },
-    { icon: "🏆", title: "Hack The Future 2025 Finalist", sub: "IIT Gandhinagar national hackathon" },
-    { icon: "🌟", title: "Top 50 Mentor", sub: "GirlScript Summer of Code" },
+    { icon: "🌟", title: "Top 50 Mentor", sub: "GirlScript Summer of Code, mentored 30+ contributors" },
     { icon: "⭐", title: "3★ Rating — CodeChef", sub: "Competitive programming" },
+    { icon: "🛠️", title: "Incoming Co-coordinator", sub: "Aero Fabrication Club, IIITDM (100+ members)" },
     { icon: "📚", title: "CS50x — Harvard University", sub: "Introduction to Computer Science" },
     { icon: "☁️", title: "AWS Educate", sub: "Introduction to Generative AI" },
 ]
@@ -96,7 +97,7 @@ export default function Portfolio() {
                             Shirshendu Ranjana Tripathi
                         </h1>
                         <p style={{ fontSize: 14, color: "var(--text-dim)", marginBottom: 6 }}>
-                            Full-Stack Developer · AI/ML Enthusiast · Robotics Builder
+                            Full-Stack Developer · AI/ML Builder · Systems Engineer
                         </p>
                         <p style={{ fontSize: 12, color: "var(--text-faint)", marginBottom: 28 }}>
                             B.Tech ECE @ IIITDM Jabalpur (2024–2028)
@@ -131,9 +132,9 @@ export default function Portfolio() {
                     <div style={{ maxWidth: 780, margin: "0 auto" }}>
                         <div className="sh"><span className="sh-cmd">cat</span><span className="sh-arg">about.txt</span><span className="sh-line" /></div>
                         <p style={{ fontSize: 14, color: "var(--text-dim)", lineHeight: 1.9, maxWidth: 640 }}>
-                            I'm a first-year B.Tech ECE student at <span style={{ color: "var(--text)" }}>IIITDM Jabalpur</span> who loves building things — from full-stack web apps and AI pipelines to autonomous robots.
-                            I've competed nationally (7th rank in NIDAR), mentored in open source (GirlScript), and consistently ship projects across the entire stack.
-                            Currently serving as <span style={{ color: "var(--green)" }}>Upcoming Coordinator</span> of the Aero Fabrication Club at IIITDM Jabalpur.
+                            B.Tech ECE student at <span style={{ color: "var(--text)" }}>IIITDM Jabalpur</span> building full-stack products and AI systems that solve real problems.
+                            Recent work includes winning an MLH sponsor track with Saathi, building TrueSignal for talent verification, and shipping production-grade web systems.
+                            Serving as <span style={{ color: "var(--green)" }}>Incoming Co-coordinator</span> of the Aero Fabrication Club at IIITDM Jabalpur.
                         </p>
                     </div>
                 </section>

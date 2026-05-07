@@ -213,7 +213,7 @@ export function Terminal({ blogPosts = [] }) {
                 break
 
             case "uname":
-                pushLine({ type: "output", text: "Portfolio OS portfolio 3.0.0 React 19 / Vite 6 — IIITDM Jabalpur ECE" }); break
+                pushLine({ type: "output", text: "Portfolio OS v3.0.0 React 19 / Vite 6 — IIITDM Jabalpur ECE" }); break
 
             case "touch": case "vim": case "nano": case "vi":
                 pushLine({ type: "output", text: "Permission denied: read-only filesystem.", color: "var(--red)" }); break
@@ -234,7 +234,7 @@ export function Terminal({ blogPosts = [] }) {
                 pushLine({ type: "output", text: `${cmd}: Try 'contact' instead.` }); break
 
             case "git":
-                if (args[0] === "log") pushLine({ type: "output", text: "commit a1b2c3d (HEAD -> main)\nAuthor: Shirshendu Ranjana Tripathi\nDate:   " + new Date().toDateString() + "\n\n    feat: redesign portfolio as real macOS terminal emulator\n\ncommit b2c3d4e\n\n    feat: add AI Resume Maker" })
+                if (args[0] === "log") pushLine({ type: "output", text: "commit a1b2c3d (HEAD -> main)\nAuthor: Shirshendu Ranjana Tripathi\nDate:   " + new Date().toDateString() + "\n\n    feat: sync portfolio with 2026 resume\n\ncommit b2c3d4e\n\n    feat: redesign portfolio as real macOS terminal emulator" })
                 else if (args[0] === "status") pushLine({ type: "output", text: "On branch main\nYour branch is up to date with 'origin/main'.\n\nnothing to commit, working tree clean" })
                 else pushLine({ type: "output", text: "usage: git [log|status|...]\nTry: git log" })
                 break
